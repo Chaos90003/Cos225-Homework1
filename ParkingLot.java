@@ -42,8 +42,9 @@ public class ParkingLot {
         int AccessibleCounter = 0;
         int RegularSpotsCounter = 0;
         for (int i = 0; i < lot.spot.length; i++){
-            if(lot.spot[i].handicapAccessible){
-                AccessibleCounter++;
+            if (lot.spot[i].parkedcar == null){
+                if(lot.spot[i].handicapAccessible){
+                    AccessibleCounter++;
             }
             else{
                 RegularSpotsCounter++;
@@ -51,11 +52,7 @@ public class ParkingLot {
             }
             
         }
+    }
         return AccessibleCounter + " " + RegularSpotsCounter;
-
-    }
-        
-
-    
-    }
-
+}
+}
